@@ -52,7 +52,7 @@ if uploaded_file is not None:
                return '🔴'
             elif df4['Zona 1']  >= (df4['media'] * 0.85) and df4['Zona 1'] <= (df4['media'] * 1.15):
                return  '🟢'
-            elif df4['Zona 1']  > (df4['Min_ideal'] ) or df4['Zona 1'] < (df4['Max_ideal'] ):
+            elif df4['Zona 1']  > (df4['Min_ideal'] ) and df4['Zona 1'] < (df4['Max_ideal'] ):
                return  '🟡'
             else:
                 return  '🔴'   
@@ -63,7 +63,7 @@ if uploaded_file is not None:
                return '🔴'
             elif df4['Zona 2']  >= (df4['media'] * 0.85) and df4['Zona 2'] <= (df4['media'] * 1.15):
                return  '🟢'
-            elif df4['Zona 2']  > (df4['Min_ideal'] ) or df4['Zona 2'] < (df4['Max_ideal'] ):
+            elif df4['Zona 2']  > (df4['Min_ideal'] ) and df4['Zona 2'] < (df4['Max_ideal'] ):
                return  '🟡'
             else:
                 return  '🔴'   
@@ -74,7 +74,7 @@ if uploaded_file is not None:
                return '🔴'
             elif df4['Zona 3']  >= (df4['media'] * 0.85) and df4['Zona 3'] <= (df4['media'] * 1.15):
                return  '🟢'
-            elif df4['Zona 3']  > (df4['Min_ideal'] ) or df4['Zona 3'] < (df4['Max_ideal'] ):
+            elif df4['Zona 3']  > (df4['Min_ideal'] ) and df4['Zona 3'] < (df4['Max_ideal'] ):
                return  '🟡'
             else:
                 return  '🔴'   
@@ -85,7 +85,7 @@ if uploaded_file is not None:
                 return 'Abaixo'
             elif df4['Zona 1']  >= (df4['media'] * 0.85) and df4['Zona 1'] <= (df4['media'] * 1.15):
                return  'Ideal'
-            elif df4['Zona 1'] > df4['Min_ideal'] or df4['Zona 2'] < df4['Max_ideal']:
+            elif df4['Zona 1'] > df4['Min_ideal'] and df4['Zona 1'] < df4['Max_ideal']:
                 return  'Média'
             else:
                 return  'Acima'    
@@ -97,7 +97,7 @@ if uploaded_file is not None:
                 return 'Abaixo'
             elif df4['Zona 2']  >= (df4['media'] * 0.85) and df4['Zona 2'] <= (df4['media'] * 1.15):
                return  'Ideal'
-            elif df4['Zona 2'] > df4['Min_ideal'] or df4['Zona 2'] < df4['Max_ideal']:
+            elif df4['Zona 2'] > df4['Min_ideal'] and df4['Zona 2'] < df4['Max_ideal']:
                 return  'Média'
             else:
                 return  'Acima'       
@@ -107,7 +107,7 @@ if uploaded_file is not None:
                 return 'Abaixo'
             elif df4['Zona 3']  >= (df4['media'] * 0.85) and df4['Zona 3'] <= (df4['media'] * 1.15):
                return  'Ideal'
-            elif df4['Zona 3'] > df4['Min_ideal'] or df4['Zona 3'] < df4['Max_ideal']:
+            elif df4['Zona 3'] > df4['Min_ideal'] and df4['Zona 3'] < df4['Max_ideal']:
                 return  'Média'
             else:
                 return  'Acima'      
@@ -150,9 +150,14 @@ if uploaded_file is not None:
         df4['normalizado_Z1'] = df4.apply(normaliza_z1, axis=1)
         df4['normalizado_Z2'] = df4.apply(normaliza_z2, axis=1)
         df4['normalizado_Z3'] = df4.apply(normaliza_z3, axis=1)
-        
 
-        columns_z1 = [ 'Zona 1', 'Analise_Z1', 'Analise_Z1_indic', 'normalizado_Z1'
+        def medida(df4):
+            df4['Zona 1_'] = str(df4['Zona 1'])
+            return df4['Zona 1_'] + " " + df4['Unidade']
+        
+        df4['zona 1_'] = df4.apply(medida, axis=1)
+
+        columns_z1 = [ 'zona 1_', 'Analise_Z1', 'Analise_Z1_indic', 'normalizado_Z1'
                    ]
         columns_z2 = [ 'Zona 2', 'Analise_Z2', 'Analise_Z2_indic', 'normalizado_Z2'
                        ]
@@ -181,7 +186,7 @@ if uploaded_file is not None:
         }) 
 
 
-
+    
         col1 = df_filterz1
         col2 = df_filterz2
         col3 = df_filterz3
