@@ -1,0 +1,29 @@
+Atributo,Zona 1,Zona 2,Zona 3,Unidade,Agrupamento,Tipo,Min_ideal,Max_ideal
+pH Água,5.1,5.2,4.8,Adm.,1,Quimico,5.5,6.5
+Matéria Orgânica,5.1,1.6,1.4,%,1,Quimico,2.0,10.0
+Fósforo,3.7,5.8,8.3,mg dm³,2,Quimico,10.0,200.0
+Potássio,60,78,110,mg dm³,2,Quimico,20.0,80.0
+Cálcio,4.9,3.5,2.1,Cmol dm³,2,Quimico,4.0,60.0
+Magnésio,0.8,0.3,0.6,Cmol dm³,2,Quimico,1.0,50.0
+Enxofre,8.2,16.4,7.9,mg dm³,2,Quimico,10.0,100.0
+CTC*,12.5,11.3,10.2,Cmol dm³,1,Quimico,10.0,100.0
+V*,60,75,53,%,1,Quimico,50.0,100.0
+m*,2,7,12,%,3,Quimico,0.0,5.0
+Zinco,0.3,0.3,0.3,mg dm³,2,Quimico,0.5,5.0
+Cobre,0.3,0.4,0.3,mg dm³,2,Quimico,0.5,5.0
+Boro,0.4,0.4,0.3,mg dm³,2,Quimico,1.0,10.0
+Ferro,0.5,0.3,1.2,Cmol dm³,3,Quimico,0.0,0.5
+Sódio,80,120,230,mg dm³,3,Quimico,0.0,120.0
+Manganês,0.8,8.9,111,mg dm³,3,Quimico,5.0,80.0
+H+Al,1.2,3.3,5.9,Cmol dm³,1,Quimico,0.0,2.0
+Alumínio,0.1,0,0.3,Cmol dm³,3,Quimico,0.0,0.8
+I.C.S*,1.8,2.1,2.9,Adm.,4,Fisico,0.0,2.0
+Areia,12,21,25,%,4,Fisico,0.0,0.0
+Silte,25,25,25,%,4,Fisico,0.0,0.0
+Argila,63,54,50,%,4,Fisico,0.0,0.0
+Classe Textural,Arenoso,Argiloso,Argiloso,Adm.,4,Fisico,0.0,0.0
+Arisulfatase,135,102,89,mg/kg,5,Biologico,0.0,100.0
+Beta-Glicosidase,125,77,32,mg/kg,5,Biologico,0.0,100.0
+Nematóide Cisto,0,5,10,un/200 cm³,5,Biologico,0.0,100.0
+Nematóide Galhas,0,0,5,un/200 cm³,5,Biologico,0.0,100.0
+Nematóide Espiralado,100,120,135,un/200 cm³,5,Biologico,0.0,100.0
