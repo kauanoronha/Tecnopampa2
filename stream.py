@@ -181,10 +181,12 @@ if uploaded_file is not None:
             )
         }) 
 
+
+
         col1 = df_filterz1
         col2 = df_filterz2
         col3 = df_filterz3
-        
+        st.write('importar a planilha dos nomes dos agrupamentos, e criar filtros delas no sidebar')
 
 
 
