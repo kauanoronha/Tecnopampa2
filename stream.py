@@ -10,11 +10,8 @@ st.set_page_config(
 #insercao dos dados do cliente 
 nome1 = st.sidebar.text_input("Nome do cliente")
 
-#insercao dos dados do cliente 
-nome1 = st.sidebar.text_input("Nome do cliente")
-
 #uploader do stream
-uploaded_file = st.sidebar.sidebar.file_uploader("Escolha seu arquivo",
+uploaded_file = st.sidebar.file_uploader("Escolha seu arquivo",
                                  type=['xlsx'],
                                  )
 #valida o arquivo 
